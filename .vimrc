@@ -23,7 +23,9 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'fholgado/minibufexpl.vim'
 
 Bundle 'bling/vim-airline'
-let g:airline_theme='solarized'
+" for mac:
+" export TERM=xterm-256color
+let g:airline_theme='molokai'
 
 fu! OnEnter()
   MBEOpen
