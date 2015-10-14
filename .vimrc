@@ -10,6 +10,47 @@ set wrap "Wrap lines
 set nocompatible
 set autoread
 
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Plugins
+" Plugin 'git://git.wincent.com/command-t.git' 
+
+Plugin 'fholgado/minibufexpl.vim'
+
+Plugin 'bling/vim-airline'
+" for mac:
+" export TERM=xterm-256color
+let g:airline_theme='molokai'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
@@ -92,26 +133,6 @@ map <C-l> <C-W>l
 
 map <leader>pp :setlocal paste!<cr>
 
-" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-set runtimepath+=~/.vim/bundle/vundle
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
-
-" Plugins
-" Bundle 'git://git.wincent.com/command-t.git' 
-
-Bundle 'fholgado/minibufexpl.vim'
-
-Bundle 'bling/vim-airline'
-" for mac:
-" export TERM=xterm-256color
-let g:airline_theme='molokai'
-
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
 fu! OnEnter()
   MBEOpen
 endf
