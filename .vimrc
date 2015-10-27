@@ -135,6 +135,7 @@ map <leader>pp :setlocal paste!<cr>
 
 fu! OnEnter()
   MBEOpen
+  NERDTree
 endf
 au VimEnter * call OnEnter()
 
@@ -147,3 +148,7 @@ endfunc
 autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
 autocmd BufWrite *.rb :call DeleteTrailingWS()
+
+autocmd BufWinEnter * NERDTreeMirror
+
+set mouse=a
